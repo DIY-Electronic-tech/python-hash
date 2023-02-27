@@ -35,7 +35,7 @@ def arr_mixing_t1(inArr):
 
 
 def string_multiplication_t0(inArr):
-    oneVal = inArr[0]                   # inArr[len(inArr)-1] *= inArr[0]
+    oneVal = inArr[0]                  
     for i in range(len(inArr)-1):
         inArr[i] *= inArr[i+1]
     inArr[len(inArr)-1] *= oneVal
@@ -58,19 +58,12 @@ def convertArrToHash(inArr):
 
 
 def getHash(inStr):
-    #inStr = list(inStr)
-    """hash_len_dataIn = inStr[:hash_len]
-    hash_len_dataIn = list(hash_len_dataIn)"""
     hash_len_dataIn = []
-
     if len(inStr) > hash_len:
         hash_len_dataIn = list(map(lambda x: ord(x), inStr[:hash_len]))
         for i in range(hash_len, len(inStr)):
-            #print(i)
             for j in range(hash_len):
-                #print(chr(int( rtXtr(2, ord(hash_len_dataIn[j]) * ord(inStr[i])) )))
                 hash_len_dataIn[j] *= ord(inStr[i])
-
     elif len(inStr) < hash_len:
         hash_len_dataIn = list(map(lambda x: ord(x), inStr))
         hashVal = len(hash_len_dataIn) * (hash_len - len(hash_len_dataIn))
@@ -84,13 +77,8 @@ def getHash(inStr):
 
 
 
-"""print('Print "$" key to exit')
-while True:
-    strInput = input('Print any string: ')
-    if strInput == '$':
-        break
-    else:
-        print(getHash(strInput))"""
+####    Tests   ####
+
 
 import random
 
